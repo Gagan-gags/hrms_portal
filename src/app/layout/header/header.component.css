@@ -8,7 +8,7 @@
 
 .app-header {
   background: #ffffff;
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
 .app-header-logo {
@@ -51,4 +51,9 @@
 .app-header .bx-menu {
   margin: 0 15px;
   cursor: pointer;
+}
+
+
+@media (max-width: 1024px){
+  
 }

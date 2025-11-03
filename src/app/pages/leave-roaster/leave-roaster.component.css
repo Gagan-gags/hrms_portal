@@ -62,9 +62,9 @@ textarea {
 
 /* Responsive */
 @media (max-width: 767.98px) {
-    .roster-grid {
+    /* .roster-grid {
         display: none;
-    }
+    } */
 
 
     .employee-card {

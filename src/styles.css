@@ -921,37 +921,11 @@ table.dataTable {
     width: 100%;
     justify-content: flex-end;
   }
-
-  .sidebar {
-    transform: translateX(-100%);
-    top: 0;
-  }
-
-  .sidebar.SidebarClose {
-    transform: translateX(0);
-    width: 242px;
-  }
-
-
-  .sidebar.SidebarClose .nav-links li a .link_name {
-    opacity: 1;
-    pointer-events: none;
-  }
-
-  .sidebar.SidebarClose .nav-links i.arrow {
-    display: block;
-  }
-
-  .overlay.SidebarClose {
-    display: block;
-  }
-
-  .sidebar.SidebarClose~.home-section {
-    margin-left: 0;
-  }
-
   .home-section {
     margin-left: 0;
+  }
+  .SidebarClose .home-section{
+    margin-left: 0 !important;
   }
 
   .brand-logo img {
