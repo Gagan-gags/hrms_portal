@@ -1,0 +1,86 @@
+:host {
+    text-align: left !important;
+    background: #fff;
+}
+
+
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+
+
+.schedule-cell {
+    height: 80px;
+    position: relative;
+    background-color: #fff;
+}
+
+
+.shift-card {
+    background: #e7f8ed;
+    border-radius: 8px;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+    color: #1c7c3f;
+    border: 1px solid #c9eccc;
+    transition: all 0.2s ease;
+}
+
+
+.shift-card:hover {
+    background: #d4f0dc;
+    cursor: pointer;
+}
+
+
+.bg-light-green {
+    background-color: #e7f8ed !important;
+}
+
+
+.add-employee {
+    background: #fff;
+}
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .roster-grid {
+        display: none;
+    }
+
+
+    .employee-card {
+        display: block;
+    }
+
+
+    .employee-card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+
+    .employee-card .shift-card {
+        margin-top: 0.5rem;
+    }
+}
