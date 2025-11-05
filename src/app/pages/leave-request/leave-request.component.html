@@ -1,349 +1,294 @@
   <div class="page-wrapper">
-            <div class="content container-fluid">
+    <div class="content container-fluid">
 
-               <!-- Page Header -->
-               <div class="page-header mb-4">
-                     <div class="row align-items-center">
-                        <div class="col">
-                           <h4 class="page-title mb-0">Leaves</h4>
-                           <ul class="breadcrumb">
-                                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                 <li class="breadcrumb-item active">Leaves</li>
-                           </ul>
-                        </div>
-                        <div class="col-auto ms-auto">
-                           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_leave">
-                                 <i class="fa fa-plus"></i> Apply Leave
-                           </button>
-                        </div>
-                     </div>
-               </div>
+      <!-- Page Header -->
+      <div class="page-header mb-4">
+        <div class="row align-items-center">
+          <div class="col">
+            <h4 class="page-title mb-0">Leaves</h4>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+              <li class="breadcrumb-item active">Leaves</li>
+            </ul>
+          </div>
+          <div class="col-auto ms-auto">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_leave">
+              <i class="fa fa-plus"></i> Apply Leave
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row g-3 mb-4">
 
-               <div class="row g-3 mb-4">
-                     <!-- Sick Leaves Card -->
-                     <div class="col-md-3">
-                           <div class="card p-3">
-                              <div class="d-flex align-items-center mb-2">
-                                 <div class="bg-warning-subtle rounded-2 p-2 me-2 mb-2">
-                                       <span class="fs-4">😷</span>
-                                 </div>
-                                 <h6 class="mb-0">Sick Leaves</h6>
-                              </div>
-                              <div class="d-flex align-items-center justify-content-between">
-                                 <small>Used</small>
-                                 <small>5 / 10 Days</small>
-                              
-                              </div>
-                              <div class="progress w-100 me-2" style="height: 6px;">
-                                       <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;"></div>
-                                 </div>
-                           </div>
-                     </div>
+        <!-- Total Leave -->
+        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <div class="card border-0 shadow-sm rounded-3 bg-light-subtle h-100">
+            <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon-circle text-danger d-flex align-items-center justify-content-center">
+                <i class="bi bi-ban fs-3"></i>
+              </div>
+              <div>
+                <h6 class="text-muted mb-1">Total Leave</h6>
+                <h3 class="fw-bold mb-0">15</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                     <!-- Vacation Card -->
-                     <div class="col-md-3">
-                           <div class="card p-3">
-                              <div class="d-flex align-items-center mb-2">
-                                 <div class="bg-info-subtle rounded-2 p-2 me-2 mb-2">
-                                       <span class="fs-4">✈️</span>
-                                 </div>
-                                 <h6 class="mb-0">Vacation</h6>
-                              </div>
-                              <div class="d-flex align-items-center justify-content-between">
-                              <small>Used</small>
-                                 <small>3 / 10 Days</small>
-                              </div>
-                              <div class="progress w-100 me-2" style="height: 6px;">
-                                       <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;"></div>
-                                 </div>
-                           </div>
-                     </div>
+        <!-- Approved -->
+        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <div class="card border-0 shadow-sm rounded-3 bg-light-subtle h-100">
+            <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon-circle text-success d-flex align-items-center justify-content-center">
+                <i class="bi bi-patch-check fs-3"></i>
+              </div>
+              <div>
+                <h6 class="text-muted mb-1">Approved</h6>
+                <h3 class="fw-bold mb-0">12</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                     <!-- Casual Leaves Card -->
-                     <div class="col-md-3">
-                           <div class="card p-3">
-                              <div class="d-flex align-items-center mb-2">
-                                 <div class="bg-danger-subtle rounded-2 p-2 me-2 mb-2">
-                                       <span class="fs-4">🏠</span>
-                                 </div>
-                                 <h6 class="mb-0">Casual Leaves</h6>
-                              </div>
-                              <div class="d-flex align-items-center justify-content-between">
-                                 <small>Used</small>
-                                 <small>6 / 10 Days</small>
-                              </div>
-                              <div class="progress w-100 me-2" style="height: 6px;">
-                                       <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"></div>
-                                 </div>
-                           </div>
-                     </div>
+        <!-- Rejected -->
+        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <div class="card border-0 shadow-sm rounded-3 bg-light-subtle h-100">
+            <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon-circle text-danger d-flex align-items-center justify-content-center">
+                <i class="bi bi-x-circle fs-3"></i>
+              </div>
+              <div>
+                <h6 class="text-muted mb-1">Rejected</h6>
+                <h3 class="fw-bold mb-0">2</h3>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                     <!-- Maternity/Paternity Card -->
-                     <div class="col-md-3">
-                           <div class="card p-3">
-                              <div class="d-flex align-items-center mb-2">
-                                 <div class="bg-success-subtle rounded-2 p-2 me-2 mb-2">
-                                       <span class="fs-4">👶</span>
-                                 </div>
-                                 <h6 class="mb-0">Maternity/Paternity</h6>
-                              </div>
-                              <div class="d-flex align-items-center justify-content-between">
-                              <small>Used</small>
-                                 <small>2 / 10 Days</small>
-                              </div>
-                              <div class="progress w-100 me-2" style="height: 6px;">
-                                       <div class="progress-bar bg-warning" role="progressbar" style="width: 20%;"></div>
-                                 </div>
-                           </div>
-                     </div>
+        <!-- Pending -->
+        <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <div class="card border-0 shadow-sm rounded-3 bg-light-subtle h-100">
+            <div class="card-body d-flex align-items-center gap-3">
+              <div class="icon-circle text-warning d-flex align-items-center justify-content-center">
+                <i class="bi bi-hourglass-split fs-3"></i>
+              </div>
+              <div>
+                <h6 class="text-muted mb-1">Pending</h6>
+                <h3 class="fw-bold mb-0">5</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- Leaves Table -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table__wrapper table-responsive">
+            <table class="table table-hover align-middle shadow-sm mb-4" id="dataTableDefualt">
+              <thead class="table-light">
+                <tr>
+                  <th>Leave Type</th>
+                  <th>Leave Duration</th>
+                  <th>Days</th>
+                  <th>Reason</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Medical Leave</td>
+                  <td>19 April 2024 - 24 April 2024</td>
+                  <td>6</td>
+                  <td>Medical Leave</td>
+                  <td><span class="badge bg-warning text-dark">Pending</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <a href="#" class="text-primary fs-5"><i class="bi bi-pencil-square"></i></a>
+                      <button class="btn btn-link text-danger p-0 fs-5"><i class="bi bi-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Personal Leave</td>
+                  <td>15 April 2024 - 16 April 2024</td>
+                  <td>1</td>
+                  <td>Personal Leave</td>
+                  <td><span class="badge bg-success">Approved</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <a href="#" class="text-primary fs-5"><i class="bi bi-pencil-square"></i></a>
+                      <button class="btn btn-link text-danger p-0 fs-5"><i class="bi bi-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sick Leave</td>
+                  <td>10 March 2024 - 12 March 2024</td>
+                  <td>3</td>
+                  <td>Medical Condition</td>
+                  <td><span class="badge bg-warning text-dark">Pending</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <a href="#" class="text-primary fs-5"><i class="bi bi-pencil-square"></i></a>
+                      <button class="btn btn-link text-danger p-0 fs-5"><i class="bi bi-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Vacation Leave</td>
+                  <td>01 May 2024 - 07 May 2024</td>
+                  <td>7</td>
+                  <td>Family Trip</td>
+                  <td><span class="badge bg-success">Approved</span></td>
+                  <td>
+                    <div class="d-flex align-items-center gap-2">
+                      <a href="#" class="text-primary fs-5"><i class="bi bi-pencil-square"></i></a>
+                      <button class="btn btn-link text-danger p-0 fs-5"><i class="bi bi-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- Repeat pattern for other rows -->
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Leave Modal -->
+    <div class="modal fade" id="add_leave" tabindex="-1" aria-labelledby="addLeaveLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Leave Request</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card__wrapper mb-20">
+              <div class="row gy-20">
+                <div class="col-md-12">
+                  <div class="from__input-box">
+                    <div class="form__input-title">
+                      <label for="largeSelect" class="form-label">Leave
+                        Type<span>*</span></label>
+                    </div>
+                    <div class="form__input">
+                      <select id="largeSelect" class="form-select">
+                        <option value="0">Select Leave Type</option>
+                        <option value="1">Medical Leave</option>
+                        <option value="2">Personal Leave</option>
+                        <option value="3">Vacation Leave</option>
+                        <option value="4">Monthly Leave</option>
+                        <option value="5">Yearly Leave</option>
+                      </select>
+                    </div>
                   </div>
-
-
-               <!-- Leaves Table -->
-               <div class="row">
-                     <div class="col-md-12">
-                        <div class="table-responsive">
-                           <table id="leaveTable" class="table bg-light border table-striped custom-table mb-0 datatable">
-                                 <thead class="table-dark">
-                                    <tr>
-                                       <th>Leave Type</th>
-                                       <th>From</th>
-                                       <th>To</th>
-                                       <th>No of Days</th>
-                                       <th>Reason</th>
-                                       <th class="text-center">Status</th>
-                                       <th>Approved by</th>
-                                       <th class="text-end">Actions</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                    <tr>
-                                    <td>Sick Leave</td>
-                                    <td>12 Apr 2025</td>
-                                    <td>14 Apr 2025</td>
-                                    <td>3 days</td>
-                                    <td>Fever and Cold</td>
-                                    <td class="text-center">
-                                       <span class="inline-flex px-3 py-1 rounded-pill fs-6 font-medium bg-warning-light text-warning border border-warning/20">Pending</span>
-                                    </td>
-                                    <td>
-                                       <h2 class="table-avatar">
-                                             <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-01.jpg" alt=""></a>
-                                             <a href="#">Alice Johnson</a>
-                                       </h2>
-                                    </td>
-                                    <td class="text-end">
-                                       <div class="dropdown">
-                                             <button class="btn btn-link p-0" type="button" data-bs-toggle="dropdown">
-                                                <i class="bi bi-three-dots-vertical"></i>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_leave"><i class="fa fa-pencil me-2"></i>Edit</a></li>
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_approve"><i class="fa fa-trash me-2"></i>Delete</a></li>
-                                             </ul>
-                                       </div>
-                                    </td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>Earned Leave</td>
-                                    <td>20 May 2025</td>
-                                    <td>25 May 2025</td>
-                                    <td>6 days</td>
-                                    <td>Family Vacation</td>
-                                    <td class="text-center">
-                                       <span class="inline-flex px-3 py-1 rounded-pill fs-6 font-medium bg-success-light text-success border border-warning/20">Approved</span>
-                                    </td>
-                                    <td>
-                                       <h2 class="table-avatar">
-                                             <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-02.jpg" alt=""></a>
-                                             <a href="#">David Smith</a>
-                                       </h2>
-                                    </td>
-                                    <td class="text-end">
-                                       <div class="dropdown">
-                                             <button class="btn btn-link p-0" type="button" data-bs-toggle="dropdown">
-                                                <i class="bi bi-three-dots-vertical"></i>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_leave"><i class="fa fa-pencil me-2"></i>Edit</a></li>
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_approve"><i class="fa fa-trash me-2"></i>Delete</a></li>
-                                             </ul>
-                                       </div>
-                                    </td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>Maternity Leave</td>
-                                    <td>1 Jan 2025</td>
-                                    <td>30 Mar 2025</td>
-                                    <td>90 days</td>
-                                    <td>Childbirth</td>
-                                    <td class="text-center">
-                                       <span class="inline-flex px-3 py-1 rounded-pill fs-6 font-medium bg-success-light text-success border border-warning/20">Approved</span>
-                                    </td>
-                                    <td>
-                                       <h2 class="table-avatar">
-                                             <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-03.jpg" alt=""></a>
-                                             <a href="#">Sophia Lee</a>
-                                       </h2>
-                                    </td>
-                                    <td class="text-end">
-                                       <div class="dropdown">
-                                             <button class="btn btn-link p-0" type="button" data-bs-toggle="dropdown">
-                                                <i class="bi bi-three-dots-vertical"></i>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_leave"><i class="fa fa-pencil me-2"></i>Edit</a></li>
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_approve"><i class="fa fa-trash me-2"></i>Delete</a></li>
-                                             </ul>
-                                       </div>
-                                    </td>
-                                 </tr>
-
-                                 <tr>
-                                    <td>Casual Leave</td>
-                                    <td>5 Jun 2025</td>
-                                    <td>6 Jun 2025</td>
-                                    <td>2 days</td>
-                                    <td>Personal Work</td>
-                                    <td class="text-center">
-                                       <span class="inline-flex px-3 py-1 rounded-pill fs-6 font-medium bg-danger-light text-danger border border-warning/20">Rejected</span>
-                                    </td>
-                                    <td>
-                                       <h2 class="table-avatar">
-                                             <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-04.jpg" alt=""></a>
-                                             <a href="#">Michael Brown</a>
-                                       </h2>
-                                    </td>
-                                    <td class="text-end">
-                                       <div class="dropdown">
-                                             <button class="btn btn-link p-0" type="button" data-bs-toggle="dropdown">
-                                                <i class="bi bi-three-dots-vertical"></i>
-                                             </button>
-                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#edit_leave"><i class="fa fa-pencil me-2"></i>Edit</a></li>
-                                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete_approve"><i class="fa fa-trash me-2"></i>Delete</a></li>
-                                             </ul>
-                                       </div>
-                                    </td>
-                                 </tr>
-
-                                 </tbody>
-                           </table>
-                        </div>
-                     </div>
-               </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="from__input-box">
+                    <div class="form__input-title">
+                      <label class="form-check-label" for="dateDuration">Leave
+                        Duration</label>
+                    </div>
+                    <div class="form__input">
+                      <input class="form-control" id="dateDuration" type="text" placeholder="Select date range"
+                        required />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="from__input-box">
+                    <div class="form__input-title">
+                      <label for="numberDays">Number of days <span>*</span></label>
+                    </div>
+                    <div class="form__input">
+                      <input class="form-control" name="numberDays" id="numberDays" type="text" readonly required />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="from__input-box">
+                    <div class="form__input-title">
+                      <label>Reason <span>*</span></label>
+                    </div>
+                    <div class="form__input">
+                      <textarea class="form-control" name="name" required></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Add Leave Modal -->
-            <div class="modal fade" id="add_leave" tabindex="-1" aria-labelledby="addLeaveLabel" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h5 class="modal-title">Add Leave</h5>
-                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                           <form>
-                                 <div class="mb-3">
-                                    <label>Leave Type <span class="text-danger">*</span></label>
-                                    <select class="form-select">
-                                       <option>Select Leave Type</option>
-                                       <option>Casual Leave 12 Days</option>
-                                       <option>Medical Leave</option>
-                                       <option>Loss of Pay</option>
-                                    </select>
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>From <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control datetimepicker">
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>To <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control datetimepicker">
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>Number of days <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" readonly>
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>Remaining Leaves <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" value="12" readonly>
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>Leave Reason <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" rows="4"></textarea>
-                                 </div>
-                                 <div class="text-end">
-                                    <button class="btn btn-primary">Submit</button>
-                                 </div>
-                           </form>
-                        </div>
-                     </div>
-               </div>
+    <!-- Edit Leave Modal -->
+    <div class="modal fade" id="edit_leave" tabindex="-1" aria-labelledby="editLeaveLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Leave</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label>Leave Type <span class="text-danger">*</span></label>
+                <select class="form-select">
+                  <option>Select Leave Type</option>
+                  <option>Casual Leave 12 Days</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label>From <span class="text-danger">*</span></label>
+                <input type="text" class="form-control datetimepicker" value="01-01-2019">
+              </div>
+              <div class="mb-3">
+                <label>To <span class="text-danger">*</span></label>
+                <input type="text" class="form-control datetimepicker" value="01-01-2019">
+              </div>
+              <div class="mb-3">
+                <label>Number of days <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" value="2" readonly>
+              </div>
+              <div class="mb-3">
+                <label>Remaining Leaves <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" value="12" readonly>
+              </div>
+              <div class="mb-3">
+                <label>Leave Reason <span class="text-danger">*</span></label>
+                <textarea class="form-control" rows="4">Going to hospital</textarea>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Leave Modal -->
+    <div class="modal fade" id="delete_approve" tabindex="-1" aria-labelledby="deleteLeaveLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <h3>Delete Leave</h3>
+            <p>Are you sure you want to cancel this leave?</p>
+            <div class="d-flex justify-content-center gap-2">
+              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Edit Leave Modal -->
-            <div class="modal fade" id="edit_leave" tabindex="-1" aria-labelledby="editLeaveLabel" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                     <div class="modal-content">
-                        <div class="modal-header">
-                           <h5 class="modal-title">Edit Leave</h5>
-                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                           <form>
-                                 <div class="mb-3">
-                                    <label>Leave Type <span class="text-danger">*</span></label>
-                                    <select class="form-select">
-                                       <option>Select Leave Type</option>
-                                       <option>Casual Leave 12 Days</option>
-                                    </select>
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>From <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control datetimepicker" value="01-01-2019">
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>To <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control datetimepicker" value="01-01-2019">
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>Number of days <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" value="2" readonly>
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>Remaining Leaves <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" value="12" readonly>
-                                 </div>
-                                 <div class="mb-3">
-                                    <label>Leave Reason <span class="text-danger">*</span></label>
-                                    <textarea class="form-control" rows="4">Going to hospital</textarea>
-                                 </div>
-                                 <div class="text-end">
-                                    <button class="btn btn-primary">Save</button>
-                                 </div>
-                           </form>
-                        </div>
-                     </div>
-               </div>
-            </div>
-
-            <!-- Delete Leave Modal -->
-            <div class="modal fade" id="delete_approve" tabindex="-1" aria-labelledby="deleteLeaveLabel" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                     <div class="modal-content">
-                        <div class="modal-body text-center">
-                           <h3>Delete Leave</h3>
-                           <p>Are you sure you want to cancel this leave?</p>
-                           <div class="d-flex justify-content-center gap-2">
-                                 <button class="btn btn-danger">Delete</button>
-                                 <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                           </div>
-                        </div>
-                     </div>
-               </div>
-            </div>
-
-</div>
+  </div>

@@ -6,6 +6,7 @@ import { LeaveRequestComponent } from './pages/leave-request/leave-request.compo
 import { DailyPunchComponent } from './pages/daily-punch/daily-punch.component';
 import { SalarySlipComponent } from './pages/salary-slip/salary-slip.component';
 import { LeaveRoasterComponent } from './pages/leave-roaster/leave-roaster.component';
+import { PayrollProcessComponent } from './pages/payroll-process/payroll-process.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 
 export const routes: Routes = [
@@ -21,7 +22,8 @@ export const routes: Routes = [
       { path: 'leave-request', component: LeaveRequestComponent },
       { path: 'daily-punch', component: DailyPunchComponent },
       { path: 'salary-slip', component: SalarySlipComponent },
-      { path: 'leave-roaster', component: LeaveRoasterComponent }
+      { path: 'leave-roaster', component: LeaveRoasterComponent },
+      { path: 'payroll-process', component: PayrollProcessComponent }
 
     ]
   },
