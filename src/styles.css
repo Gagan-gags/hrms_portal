@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 /* Example custom styles */
 * {
@@ -16,9 +17,7 @@ html,
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-tap-highlight-color: transparent;
@@ -29,7 +28,8 @@ html {
   width: 100%;
   height: 100%;
   background: #f2f2f2;
-  color: var(--muted-foreground);
+  color: var(--text-body);
+  font-size: 1rem;
   font-family: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -74,12 +74,22 @@ button,
   --primary: #6d28d9;
   --primary-hover: #5b21b6;
   --primary-light: #f5f3ff;
-
+  --white: #ffffff;
+  --clr-text-rating: #EC8D1D;
+  --clr-theme-primary: #6C5FFC;
+  --clr-theme-secondary: #1ABC9C;
+  --clr-theme-tertiary: #ABA3FD;
+  --clr-action-danger: #FF3A29;
+  --clr-action-info: #80CAFF;
+  --clr-action-link: #9747FF;
+  --clr-action-success: #34B53A;
+  --clr-action-warning: #FFB200;
+  --clr-bg-label: #f8f9fd;
   /* Neutral & secondary */
   --secondary: #d4d4d4;
   --secondary-dark: #6b7280;
   --muted: #f5f6f8;
-  --muted-foreground: #6b7280;
+  --text-body: #878a99;
   --black: #000000;
   /* Status colors */
   /* Status Colors */
@@ -102,8 +112,15 @@ button,
   --sidebar-border: #e5e7eb;
   --sidebar-active: #6d28d9;
   --sidebar-text: #6b7280;
+  --clr-theme-secondary: #1ABC9C;
+  --clr-action-danger: #FF3A29;
+  --bs-border-radius: .375rem;
+   --bs-border-width: 1px;
+  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
 }
-
+div .bg-success {
+    background-color: #03c95a !important;
+}
 /* ========== DARK MODE ========== */
 .dark {
   --primary: #6d28d9;
@@ -123,6 +140,8 @@ button,
   --sidebar-bg: #1f2937;
   --sidebar-border: #374151;
   --sidebar-text: #9ca3af;
+  --clr-border-1: #EAEAEA;
+
 }
 
 /* Backgrounds */
@@ -266,11 +285,27 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1e293b;
+  color: #202c4b;
   font-weight: 500;
   line-height: 1.5;
   margin-bottom: .5rem;
   margin-top: 0;
+}
+h5, .h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+h4, .h4 {
+    font-size: 1.125rem;
+}
+h2, .h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+p,
+span,
+td {
+  color: var(--text-body) !important;
 }
 
 .progress-bar.progress-c-theme {
@@ -440,6 +475,7 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
   margin-left: 242px;
   padding: 80px 15px 40px 15px;
 }
+
 .SidebarClose .home-section {
   margin-left: 68px !important;
 }
@@ -510,7 +546,20 @@ h2 {
   opacity: .7;
   width: .875rem;
 }
+.card {
+    margin-bottom: 15px;
+    background-color: #fff;
+}
 
+.card .card-header {
+    border-color: #e5e7eb;
+    position: relative;
+    background: transparent;
+    padding: 1rem 1.25rem;
+}
+.card-header:first-child {
+    border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+}
 .card .card-body {
   padding: 1.25rem;
 }
@@ -921,10 +970,12 @@ table.dataTable {
     width: 100%;
     justify-content: flex-end;
   }
+
   .home-section {
     margin-left: 0;
   }
-  .SidebarClose .home-section{
+
+  .SidebarClose .home-section {
     margin-left: 0 !important;
   }
 
@@ -969,7 +1020,7 @@ table.dataTable {
   position: absolute;
   left: 0;
   right: 0;
-      top: 3px;
+  top: 3px;
   text-align: center;
 }
 
@@ -1006,4 +1057,63 @@ body.dark-mode .icon-light {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
+}
+
+.bd-badge {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 10px 4px 10px;
+  color: var(--white);
+  height: 26px;
+  min-width: 75px;
+  display: inline-flex;
+  text-align: center;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.table__icon {
+  color: var(--white);
+  padding: 2px 7px !important;
+  transition: all 0.3s linear;
+  border-radius: 6px !important;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bd-badge.bg-warning {
+  background-color: var(--clr-action-warning) !important;
+}
+
+.bd-badge.bg-success {
+  background-color: var(--clr-action-success) !important;
+}
+
+.table__icon.edit {
+  color: var(--clr-theme-secondary);
+  background: rgba(26, 188, 156, 0.1);
+}
+
+.table__icon.edit:hover {
+  color: var(--white) !important;
+  background-color: var(--clr-theme-secondary);
+}
+
+.table__icon.delete {
+  color: var(--clr-action-danger);
+  background: rgba(255, 58, 41, 0.15);
+}
+
+.table__icon.delete:hover {
+  color: var(--white) !important;
+  background-color: var(--clr-action-danger);
+}
+
+.table th {
+  background-color: var(--clr-bg-label);
 }

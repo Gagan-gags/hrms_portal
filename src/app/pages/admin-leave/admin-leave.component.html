@@ -48,50 +48,57 @@
       <div class="card border-0 shadow-none">
         <div class="card-body">
            <div class="table-responsive">
-        <table class="table table-hover align-middle mb-0 border"
-      >
-          <thead class="table-light">
-            <tr>
-              <th>Leave Type</th>
-              <th>Leave Duration</th>
-              <th>Days</th>
-              <th>Reason</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let leave of leaves">
-              <td>{{ leave.type }}</td>
-              <td>{{ leave.duration }}</td>
-              <td>{{ leave.days }}</td>
-              <td>{{ leave.reason }}</td>
-              <td>
-                <span class="bd-badge" [ngClass]="{
-                      'bg-warning': leave.status === 'Pending',
-                      'bg-success': leave.status === 'Approved',
-                      'bg-danger': leave.status === 'Rejected'
-                    }">
-                  {{ leave.status }}
-                </span>
-              </td>
-              <td>
-                <div class="d-flex align-items-center gap-2">
-                  <button class="btn table__icon edit p-0 fs-5 text-primary" (click)="openAddModal()">
-                    <i class="bi bi-pencil"></i>
-                  </button>
-                  <button class="btn table__icon delete p-0 fs-5 text-danger" (click)="openDeleteModal(leave)">
-                    <i class="bi bi-trash2"></i>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr *ngIf="leaves.length === 0">
-              <td colspan="6" class="text-center text-muted py-3">No records available</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+               <table class="table table-hover align-middle mb-0 border">
+                 <thead class="table-light">
+                   <tr>
+                     <th>Employee Name</th>
+                     <th>Designation</th>
+                     <th>Leave Type</th>
+                     <th>Leave Duration</th>
+                     <th>Days</th>
+                     <th>Reason</th>
+                     <th>Status</th>
+                     <th>Action</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr *ngFor="let leave of leaves">
+                     <td>{{ leave.employeeName }}</td>
+                     <td>{{ leave.designation }}</td>
+                     <td>{{ leave.type }}</td>
+                     <td>{{ leave.duration }}</td>
+                     <td>{{ leave.days }}</td>
+                     <td>{{ leave.reason }}</td>
+                     <td>
+                       <span class="bd-badge" [ngClass]="{
+            'bg-warning': leave.status === 'Pending',
+            'bg-success': leave.status === 'Approved',
+            'bg-danger': leave.status === 'Rejected'
+          }">
+                         {{ leave.status }}
+                       </span>
+                     </td>
+                     <td>
+                       <div class="d-flex align-items-center gap-2">
+                         <button class="btn table__icon edit p-0 fs-5 text-primary" (click)="openAddModal()">
+                           <i class="bi bi-pencil"></i>
+                         </button>
+                         <button class="btn table__icon delete p-0 fs-5 text-danger" (click)="openDeleteModal(leave)">
+                           <i class="bi bi-trash2"></i>
+                         </button>
+                       </div>
+                     </td>
+                   </tr>
+
+                   <tr *ngIf="leaves.length === 0">
+                     <td colspan="8" class="text-center text-muted py-3">
+                       No records available
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+
+            </div>
         </div>
       </div>
 

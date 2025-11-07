@@ -9,8 +9,9 @@ import { CommonModule } from '@angular/common';
 import flatpickr from 'flatpickr';
 import { Modal } from 'bootstrap';
 
-// ✅ Interface for Leave Records
 interface LeaveRecord {
+  employeeName: string;
+  designation: string;
   type: string;
   duration: string;
   days: number;
@@ -19,44 +20,52 @@ interface LeaveRecord {
 }
 
 @Component({
-  selector: 'app-leave-request',
+  selector: 'app-admin-leave',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './leave-request.component.html',
-  styleUrls: ['./leave-request.component.css'],
+  templateUrl: './admin-leave.component.html',
+  styleUrl: './admin-leave.component.css'
 })
-export class LeaveRequestComponent implements AfterViewInit, OnDestroy {
-  // ✅ Leave records
+export class AdminLeaveComponent implements AfterViewInit, OnDestroy{
+// ✅ Leave records
   leaves: LeaveRecord[] = [
-    {
-      type: 'Medical Leave',
-      duration: '19 Apr 2024 - 24 Apr 2024',
-      days: 6,
-      reason: 'Medical Leave',
-      status: 'Pending',
-    },
-    {
-      type: 'Personal Leave',
-      duration: '15 Apr 2024 - 16 Apr 2024',
-      days: 1,
-      reason: 'Personal Leave',
-      status: 'Approved',
-    },
-    {
-      type: 'Sick Leave',
-      duration: '10 Mar 2024 - 12 Mar 2024',
-      days: 3,
-      reason: 'Medical Condition',
-      status: 'Rejected',
-    },
-    {
-      type: 'Vacation Leave',
-      duration: '01 May 2024 - 07 May 2024',
-      days: 7,
-      reason: 'Family Trip',
-      status: 'Approved',
-    },
-  ];
+  {
+    employeeName: 'Rohit Sharma',
+    designation: 'Software Engineer',
+    type: 'Medical Leave',
+    duration: '19 Apr 2024 - 24 Apr 2024',
+    days: 6,
+    reason: 'Medical Leave',
+    status: 'Pending',
+  },
+  {
+    employeeName: 'Neha Gupta',
+    designation: 'HR Manager',
+    type: 'Personal Leave',
+    duration: '15 Apr 2024 - 16 Apr 2024',
+    days: 1,
+    reason: 'Personal Leave',
+    status: 'Approved',
+  },
+  {
+    employeeName: 'Vikram Singh',
+    designation: 'Team Lead',
+    type: 'Sick Leave',
+    duration: '10 Mar 2024 - 12 Mar 2024',
+    days: 3,
+    reason: 'Medical Condition',
+    status: 'Rejected',
+  },
+  {
+    employeeName: 'Anjali Verma',
+    designation: 'UI/UX Designer',
+    type: 'Vacation Leave',
+    duration: '01 May 2024 - 07 May 2024',
+    days: 7,
+    reason: 'Family Trip',
+    status: 'Approved',
+  },
+];
 
   // ✅ Bootstrap Modal Refs
   @ViewChild('deleteModal') deleteModalRef!: ElementRef;

@@ -1,137 +1,62 @@
 <div class="sidebar" [class.SidebarClose]="isClosed">
             <ul class="nav-links">
 
-               <!-- Category: Main -->
-               <li class="menu-title">Main</li>
-               <li>
-                  <a routerLink="/dashboard">
-                     <i class="bi bi-speedometer2"></i>
-                     <span class="link_name">Admin Dashboard</span>
-                  </a>
-               </li>
+  <!-- Dashboard -->
+  <li class="menu-title">Dashboard</li>
+  <li class="toggle-link" (click)="toggleSubmenu($event, submenuDashboard)">
+  <div class="iocn-link">
+    <a href="javascript:void(0)">
+      <i class="bi bi-speedometer2"></i>
+      <span class="link_name">Dashboard</span>
+    </a>
+    <i class="bi bi-chevron-right arrow"></i>
+  </div>
 
-               <!-- Category: Employees -->
-               <li class="menu-title">Employees</li>
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu1)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-people-fill"></i>
-                        <span class="link_name">Employees</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu1>
-                     <li><a routerLink="/employee-list">Employee List</a></li>
-                     <li><a routerLink="/performance">Performance</a></li>
-                  </ul>
-               </li>
-               <!-- Leave Management -->
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu2)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-calendar2-event-fill"></i>
-                        <span class="link_name">Leave</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu2>
-                     <li><a routerLink="/leave-request">Leave Requests</a></li>
-                     <li><a routerLink="/leave-roaster">Leave Roaster</a></li>
-                     <li><a routerLink="/leave-policy">Leave Policy</a></li>
-                  </ul>
-               </li>
-               <!-- Attendance -->
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu3)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-calendar-check-fill"></i>
-                        <span class="link_name">Attendance</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu3>
-                     <li><a routerLink="/daily-punch">Daily Punch</a></li>
-                     <li><a routerLink="/attendance-report">Attendance Report</a></li>
-                  </ul>
-               </li>
+  <ul class="sub-menu" #submenuDashboard>
+    <li><a routerLink="/dashboard">Admin Dashboard</a></li>
+    <li><a routerLink="/employee-dashboard">Employee Dashboard</a></li>
+  </ul>
+</li>
 
-               <!-- Category: HR -->
-               <li class="menu-title">HR</li>
+  <!-- HRMS -->
+  <li class="menu-title">HRMS</li>
+  <li class="toggle-link" (click)="toggleSubmenu($event, submenuHrms)">
+    <div class="iocn-link">
+      <a href="javascript:void(0)">
+        <i class="bi bi-building-fill-gear"></i>
+        <span class="link_name">HRMS</span>
+      </a>
+      <i class="bi bi-chevron-right arrow"></i>
+    </div>
+    <ul class="sub-menu" #submenuHrms>
+      <li><a routerLink="/employee-list">Employee Management</a></li>
+      <li><a routerLink="/admin-attendance">Admin Attendance</a></li>
+      <li><a routerLink="/employee-attendance">Employee Attendance</a></li>
+      <li><a routerLink="/daily-punch">Daily Punch</a></li>
+      <li><a routerLink="/admin-leave">Admin Leaves</a></li>
+      <li><a routerLink="/leave-request">Employee Leaves</a></li>
+      <li><a routerLink="/leave-roaster">Schedule / Roaster</a></li>
+      <li><a routerLink="/admin-management">Admin Management</a></li>
+    </ul>
+  </li>
 
+  <!-- Payroll -->
+  <li class="menu-title">Payroll</li>
+  <li class="toggle-link" (click)="toggleSubmenu($event, submenuPayroll)">
+    <div class="iocn-link">
+      <a href="javascript:void(0)">
+        <i class="bi bi-cash-stack"></i>
+        <span class="link_name">Payroll</span>
+      </a>
+      <i class="bi bi-chevron-right arrow"></i>
+    </div>
+    <ul class="sub-menu" #submenuPayroll>
+      <li><a routerLink="/payroll-list">Pay List</a></li>
+      <li><a routerLink="/salary-slip">Pay Slip</a></li>
+      <li><a routerLink="/payroll-process">Payroll Process</a></li>
+    </ul>
+  </li>
 
-               <!-- Payroll -->
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu4)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-cash-stack"></i>
-                        <span class="link_name">Payroll</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu4>
-                     <li><a href="salary-slip">Salary Slips</a></li>
-                     <li><a routerLink="/payroll-process">Payroll Process</a></li>
-                  </ul>
-               </li>
+</ul>
 
-
-
-               <!-- Recruitment -->
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu5)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-person-plus-fill"></i>
-                        <span class="link_name">Recruitment</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu5>
-                     <li><a href="job-openings.html">Job Openings</a></li>
-                     <li><a href="candidates.html">Candidates</a></li>
-                  </ul>
-               </li>
-
-               <!-- Reports -->
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu6)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-bar-chart-line-fill"></i>
-                        <span class="link_name">Reports</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu6>
-                     <li><a href="attendance-report.html">Attendance Report</a></li>
-                     <li><a href="payroll-report.html">Payroll Report</a></li>
-                     <li><a href="leave-report.html">Leave Report</a></li>
-                  </ul>
-               </li>
-
-               <!-- Tasks -->
-               <li class="menu-title">Tasks</li>
-               <li class="toggle-link" (click)="toggleSubmenu($event, submenu7)">
-                  <div class="iocn-link">
-                     <a href="javascript:void(0)">
-                        <i class="bi bi-list-check"></i>
-                        <span class="link_name">Tasks</span>
-                     </a>
-                     <i class="bi bi-chevron-right arrow"></i>
-                  </div>
-                  <ul class="sub-menu" #submenu7>
-                     <li><a href="task-list.html">Task List</a></li>
-                     <li><a href="assigned-tasks.html">Assigned Tasks</a></li>
-                     <li><a href="task-report.html">Task Reports</a></li>
-                  </ul>
-               </li>
-
-               <!-- Category: Performance -->
-               <li class="menu-title">Performance</li>
-               <li>
-                  <a href="settings.html">
-                     <i class="bi bi-gear-fill"></i>
-                     <span class="link_name">Settings</span>
-                  </a>
-               </li>
-
-            </ul>
          </div>
